@@ -29,7 +29,7 @@ open class EventView: UIView {
   lazy var tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tap))
   lazy var longPressGestureRecognizer: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPress))
 
-  override init(frame: CGRect) {
+  public override init(frame: CGRect) {
     super.init(frame: frame)
     configure()
   }
@@ -47,7 +47,7 @@ open class EventView: UIView {
     addSubview(textView)
   }
 
-  func updateWithDescriptor(event: EventDescriptor) {
+  public func updateWithDescriptor(event: EventDescriptor) {
     if let attributedText = event.attributedText {
       textView.attributedText = attributedText
     } else {

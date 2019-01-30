@@ -1,8 +1,8 @@
 import Foundation
 
 public protocol EventDescriptor {
-  var startDate: Date {get}
-  var endDate: Date {get}
+  var startDate: Date { set get }
+  var endDate: Date { set get }
   var isAllDay: Bool {get}
   var text: String {get}
   var attributedText: NSAttributedString? {get}
